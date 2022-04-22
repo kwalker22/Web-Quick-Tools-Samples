@@ -1,0 +1,30 @@
+
+.tabWrapper {
+    position:relative;
+}
+.tabWrapper input[type=radio] {
+    display:none;
+}
+.tabWrapper .tab {
+    display:none;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+.tabWrapper input[type=radio]:checked+label+.tab+.tab+.tab+.tab,
+.tabWrapper input[type=radio]:checked+label+input+label+.tab+.tab+.tab,
+.tabWrapper input[type=radio]:checked+label+input+label+input+label+.tab+.tab,
+.tabWrapper input[type=radio]:checked+label+input+label+input+label+input+label+.tab {
+    display:block;
+}
+.tabWrapper input[type=radio]+label {
+    display:inline-block;
+    border:1px solid #ccc;
+    border-bottom:none;
+	background: #ddd; 
+	padding: 10px; 
+	cursor: pointer;
+}
+.tabWrapper input[type=radio]:checked+label {
+    font-weight:bold;
+    background:white;
+}
