@@ -1,30 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Datawalker Corporate Planning</title>
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<meta charset="utf-8">
+	<title>Datawalker Corporate Planning</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/rowReorder.dataTables.min.css">
+	<link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+	<link rel="stylesheet" href="css/main.css">
 
-
+	<script type="text/javascript" language="javascript" src="js/jquery-3.6.0.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/dataTables.responsive.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/dataTables.rowReorder.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/popper.min.js"></script> 
+	<script type="text/javascript" language="javascript" src="js/bootstrap-4.4.1.js"></script>
+	<script type="text/javascript" language="javascript" src="js/ColReorderWithResize.js"></script>
+	                               
+	<script>
+		$(document).ready(function () {
+			$('#example').DataTable({
+				rowreorder: {
+					selector: 'td:nth-child(2)'
+				},
+				responsive: true,
+				fixedHeader: true,
+				'dom': 'Rlfrtip'
+			});
+		});
+	</script>
 </head>
-
 <body>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/dataTables.colResize.js"></script>
-<script src="js/index.js"></script>
-
-
-
-
-
-
 <div id="mainWrapper" align='center'>
-<table id="example" class="table table-striped table-bordered" cellspacing="0">
-    <thead>
+<table id="example" class="table table-striped table-bordered hover" style="width: 100%; position: relative;">
+	<thead>
         <tr>
             <th>Name</th>
             <th>Position</th>
@@ -382,8 +392,9 @@
             <td>$112,000</td>
         </tr>
     </tbody>
-</table>
+					</table>
 </div>
+
 </body>
 
 </html>
