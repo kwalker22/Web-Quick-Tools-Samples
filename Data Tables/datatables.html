@@ -39,7 +39,8 @@
 			
 			$('#example tbody').on('click', 'tr', function (e) {
                 var cell = e.target.closest('td');
-                if(!cell) { alert('fail'); return;}
+                var before = true;
+                if(!cell) { before = false; }
                 var before = (pseudoClick(cell).before);
 				var data = datatable.row(this).data();
 				if(data[0] > 0 && before == false)
